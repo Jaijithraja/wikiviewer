@@ -1,17 +1,33 @@
-<html>
-  <head>
-    <title>Simple Wikipedia Viewer</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Wikipedia Viewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
     <h1>Wikipedia Viewer</h1>
-
-    <input id="searchInput" type="text" placeholder="Enter topic" />
-    <button id="searchButton">Search</button>
-
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search Wikipedia..." />
+      <span id="clearText">Clear ✖</span>
+      <button id="searchButton">Search</button>
+    </div>
+    <ul id="suggestions"></ul>
     <div id="result"></div>
-
-    <script src="app.js"></script>
-  </body>
+    <div id="popup" class="popup">
+      <span id="closePopup" class="popup-close">×</span>
+      <div id="popupContent"></div>
+    </div>
+  </div>
+  <div id="controls">
+    <button id="fontPlus">A+</button>
+    <button id="fontMinus">A-</button>
+    <button id="lineToggle">Toggle Line Height</button>
+    <button id="darkToggle">Dark Mode</button>
+    <button id="imgToggle">Toggle Images</button>
+  </div>
+  <script src="app.js"></script>
+</body>
 </html>
